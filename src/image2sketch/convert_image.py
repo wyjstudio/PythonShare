@@ -5,7 +5,16 @@ import cv2
 import argparse
 
 
-def image2sketch(src_file, dst_file):
+def convert():
+    # 设置传入参数
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-s", "--src", help="The source image file path.")
+    parser.add_argument("-d", "--dst", help="The destination image file path.")
+    args = parser.parse_args()
+
+    src_file = args.src
+    dst_file = args.dst
+
     # reading image
     image = cv2.imread(src_file)
 
@@ -22,13 +31,4 @@ def image2sketch(src_file, dst_file):
 
 
 if __name__ == "__main__":
-    src_image = "./cutegirl.png"
-    dst_image = "./sketch.jpg"
-    parser = argparse.ArgumentParser()
-    parser.add_argument("-s", "--src", help="The source image file path.")
-    parser.add_argument("-d", "--dst", help="The destination image file path.")
-    args = parser.parse_args()
-
-    src = args.src
-    dst = args.dst
-    image2sketch(src, dst)
+    convert()

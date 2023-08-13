@@ -1,0 +1,6 @@
+.idea/*
+dist/*
+image2sketch.egg-info/*
+venv/*
+*.pyc
+src/image2sketch.egg-info/*
