@@ -16,6 +16,9 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
+install_requires=[
+          'validators'
+      ]
 
 [project.urls]
 "Homepage" = "https://github.com/wyjstudio/PythonShare"

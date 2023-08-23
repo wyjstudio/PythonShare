@@ -5,16 +5,7 @@ import cv2
 import argparse
 
 
-def convert():
-    # 设置传入参数
-    parser = argparse.ArgumentParser()
-    parser.add_argument("-s", "--src", help="The source image file path.")
-    parser.add_argument("-d", "--dst", help="The destination image file path.")
-    args = parser.parse_args()
-
-    src_file = args.src
-    dst_file = args.dst
-
+def convert(src_file, dst_file):
     # reading image
     image = cv2.imread(src_file)
 
@@ -31,4 +22,12 @@ def convert():
 
 
 if __name__ == "__main__":
-    convert()
+    # # 设置传入参数
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-s", "--src", help="The source image file path.")
+    parser.add_argument("-d", "--dst", help="The destination image file path.")
+    args = parser.parse_args()
+
+    src_file = args.src
+    dst_file = args.dst
+    convert(src_file, dst_file)
